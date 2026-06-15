@@ -82,6 +82,8 @@ const animElements = [
   ".pricing-card",
   ".volume-card",
   ".pricing-custom-text",
+  ".testimonials .section-header",
+  ".testimonial-card",
   ".branding-matters .section-header",
   ".branding-list li",
   ".branding-intro",
@@ -122,6 +124,8 @@ createReveal(".pricing .section-header");
 createReveal(".pricing-card", 0.1);
 createReveal(".volume-card", 0.1);
 createReveal(".pricing-custom-text");
+createReveal(".testimonials .section-header");
+createReveal(".testimonial-card", 0.1);
 createReveal(".branding-matters .section-header");
 createReveal(".branding-intro");
 createReveal(".branding-list li", 0.1);
@@ -137,14 +141,16 @@ if (footerHeading && !footerHeading.querySelector('span')) {
   const text = footerHeading.innerText;
   footerHeading.innerHTML = "";
   const words = text.split(" ");
-  words.forEach(word => {
+  words.forEach((word, index) => {
     const span = document.createElement("span");
     span.style.display = "inline-block";
     span.style.opacity = "0";
     span.style.transform = "translateY(20px)";
-    span.style.marginRight = "8px";
     span.innerText = word;
     footerHeading.appendChild(span);
+    if (index < words.length - 1) {
+      footerHeading.appendChild(document.createTextNode(" "));
+    }
   });
   createReveal(".footer-heading span", 0.1);
 }
@@ -176,6 +182,6 @@ setTimeout(() => {
     opacity: 1,
     y: 0,
     duration: 0.5,
-    clearProps: "all" // Clears any GSAP transforms/opacity so CSS takes over
+    clearProps: "opacity,y" // Clears only GSAP opacity/y so VanillaTilt 3D styles remain intact
   });
 }, 1000);
