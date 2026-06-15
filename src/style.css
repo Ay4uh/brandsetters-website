@@ -273,6 +273,25 @@ section {
   text-transform: uppercase;
 }
 
+/* About Section */
+.about {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about .section-title {
+  color: #0a192f;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
 /* Services */
 .services {
   background-color: var(--color-bg);
@@ -325,11 +344,11 @@ section {
   color: #0a192f; /* Dark navy */
 }
 
-.pricing-grid {
-  max-width: 1000px;
+.pricing-grid-3 {
+  max-width: 1200px;
   margin: 0 auto 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -420,6 +439,54 @@ section {
   color: #0a192f;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+}
+
+.pricing-btn {
+  margin-top: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.pricing-volume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.volume-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  text-align: left;
+}
+
+.volume-card h4 {
+  color: #0a192f;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.volume-card h4 span {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.volume-card p {
+  color: var(--color-text-muted);
+}
+
+.pricing-custom-text {
+  font-weight: 600;
+  color: #0a192f;
+  font-size: 1.1rem;
 }
 
 /* Why Personal Branding Matters */
