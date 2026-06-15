@@ -65,10 +65,28 @@ h1, h2, h3, h4 {
   background-color: var(--color-accent);
   color: white;
   box-shadow: 0 4px 10px var(--color-accent-glow);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #1a252f;
+  transition: var(--transition-normal);
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  left: 0;
 }
 
 .btn-primary:hover {
-  background-color: #1a252f;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px var(--color-accent-glow);
 }
@@ -203,6 +221,29 @@ h1, h2, h3, h4 {
   background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 1;
+  overflow: hidden;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  animation: noise 0.5s steps(2) infinite;
+}
+
+@keyframes noise {
+  0% { transform: translate(0,0) }
+  20% { transform: translate(-5%,5%) }
+  40% { transform: translate(5%,-5%) }
+  60% { transform: translate(-5%,-5%) }
+  80% { transform: translate(5%,5%) }
+  100% { transform: translate(0,0) }
 }
 
 .hero-overlay {
@@ -233,6 +274,23 @@ h1, h2, h3, h4 {
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
   max-width: 800px;
+}
+
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  color: var(--color-secondary);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero-subtitle {
@@ -273,16 +331,21 @@ section {
   text-transform: uppercase;
 }
 
-/* Reveal Animations */
+/* Reveal Animations - GSAP Initial State */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+/* Masking */
+.mask-container {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+.mask-text {
+  display: inline-block;
+  transform: translateY(110%);
 }
 
 /* About Section */
@@ -329,8 +392,8 @@ section {
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  border-color: #d1d5db;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08), 0 0 0 1px var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .service-icon {
@@ -377,7 +440,18 @@ section {
 
 .pricing-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08), 0 0 0 1px var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.pricing-card.premium {
+  animation: pulse-glow 3s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 4px 15px rgba(43, 58, 74, 0.05); }
+  50% { box-shadow: 0 4px 25px rgba(43, 58, 74, 0.3); }
+  100% { box-shadow: 0 4px 15px rgba(43, 58, 74, 0.05); }
 }
 
 .pricing-header h3 {
@@ -690,6 +764,17 @@ section {
 
 .footer-link:hover {
   color: var(--color-secondary);
+}
+
+.footer-col a[href^="https://wa.me"],
+.footer-col a[href^="mailto"] {
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-col a[href^="https://wa.me"]:hover,
+.footer-col a[href^="mailto"]:hover {
+  color: #25D366;
+  text-shadow: 0 0 8px rgba(37, 211, 102, 0.4);
 }
 
 .footer-bottom {
