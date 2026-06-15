@@ -1,4 +1,14 @@
 import './style.css'
+import VanillaTilt from 'vanilla-tilt';
+
+// Initialize 3D Tilt
+VanillaTilt.init(document.querySelectorAll(".service-card, .pricing-card, .volume-card"), {
+  max: 5,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.1,
+  scale: 1.02
+});
 
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
@@ -30,13 +40,12 @@ if (mobileBtn && navLinks) {
 }
 
 // Reveal elements on scroll
-const revealElements = document.querySelectorAll('.service-card, .portfolio-item, .section-header');
+const revealElements = document.querySelectorAll('.reveal');
 
 const revealCallback = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('active');
       observer.unobserve(entry.target);
     }
   });
@@ -49,8 +58,5 @@ const revealObserver = new IntersectionObserver(revealCallback, {
 });
 
 revealElements.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
   revealObserver.observe(el);
 });
