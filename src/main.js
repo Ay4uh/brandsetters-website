@@ -82,6 +82,8 @@ const animElements = [
   ".pricing-card",
   ".volume-card",
   ".pricing-custom-text",
+  ".founder-image",
+  ".founder-content",
   ".testimonials .section-header",
   ".testimonial-card",
   ".branding-matters .section-header",
@@ -124,6 +126,8 @@ createReveal(".pricing .section-header");
 createReveal(".pricing-card", 0.1);
 createReveal(".volume-card", 0.1);
 createReveal(".pricing-custom-text");
+createReveal(".founder-image");
+createReveal(".founder-content", 0.2);
 createReveal(".testimonials .section-header");
 createReveal(".testimonial-card", 0.1);
 createReveal(".branding-matters .section-header");
