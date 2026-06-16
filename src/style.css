@@ -4,9 +4,9 @@
 
 :root {
   /* Colors */
-  --color-bg: #0A0A0A;
-  --color-surface: #141414;
-  --color-surface-2: #1E1E1E;
+  --color-bg: linear-gradient(135deg, #1a1a24 0%, #0a0a10 100%);
+  --color-surface: rgba(30, 30, 40, 0.4);
+  --color-surface-2: rgba(40, 40, 50, 0.4);
   --color-gold: #C9973C;
   --color-gold-light: #E8B96A;
   --color-white: #FFFFFF;
@@ -44,12 +44,12 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-bg);
+  background: var(--color-bg);
 }
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.6;
   overflow-x: hidden;
