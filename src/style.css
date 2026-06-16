@@ -982,3 +982,164 @@ a {
 }
 
 /* --- End of CSS --- */
+
+/* --- LIQUID GLASS UI (iOS 26) --- */
+
+/* Base Liquid Glass */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(200%) brightness(1.1);
+  -webkit-backdrop-filter: blur(24px) saturate(200%) brightness(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 0 0 0.5px rgba(255,255,255,0.06) inset,
+    0 1px 0 rgba(255,255,255,0.35) inset,
+    0 -1px 0 rgba(0,0,0,0.08) inset,
+    0 8px 32px rgba(0,0,0,0.18),
+    0 2px 8px rgba(0,0,0,0.12);
+  border-radius: 20px;
+}
+
+/* Iridescent shimmer edge variant */
+.glass-iridescent {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.4) inset,
+    0 8px 40px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.08);
+  border-radius: 24px;
+  position: relative;
+}
+.glass-iridescent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,200,100,0.4) 0%,
+    rgba(255,255,255,0.1) 25%,
+    rgba(150,200,255,0.3) 50%,
+    rgba(200,150,255,0.2) 75%,
+    rgba(255,200,100,0.3) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Gold-tinted glass */
+.glass-gold {
+  background: rgba(201, 151, 60, 0.15);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(201, 151, 60, 0.35);
+  box-shadow:
+    0 1px 0 rgba(255,220,120,0.5) inset,
+    0 8px 32px rgba(201,151,60,0.15),
+    0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+/* Dark glass */
+.glass-dark {
+  background: rgba(10, 10, 10, 0.45);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.1) inset,
+    0 8px 32px rgba(0,0,0,0.4);
+  border-radius: 20px;
+}
+
+/* Custom Cursor */
+body, a, button {
+  cursor: none !important;
+}
+
+.cursor {
+  width: 12px;
+  height: 12px;
+  background: rgba(201, 151, 60, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,220,120,0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(201,151,60,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background 0.3s;
+}
+
+/* Hover effect for cursor on clickable elements */
+.cursor-follower.hovering {
+  width: 60px;
+  height: 60px;
+  background: rgba(201, 151, 60, 0.1);
+  border-color: rgba(201, 151, 60, 0.4);
+}
+
+/* Floating Contact Badge */
+.floating-badge {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9000;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 15px;
+  animation: pulse 3s ease infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 8px 32px rgba(201,151,60,0.15); }
+  50% { transform: scale(1.04); box-shadow: 0 12px 40px rgba(201,151,60,0.3); }
+  100% { transform: scale(1); box-shadow: 0 8px 32px rgba(201,151,60,0.15); }
+}
+
+.hero-floating-glass {
+  position: absolute;
+  bottom: -40px;
+  left: -60px;
+  padding: 28px 36px;
+  z-index: 10;
+}
+@media (max-width: 900px) {
+  .hero-floating-glass {
+    left: 10px;
+    bottom: -20px;
+    right: 10px;
+  }
+}

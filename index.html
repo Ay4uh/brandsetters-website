@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Floating Contact Badge -->
+    <a href="#contact" class="floating-badge glass-gold">
+      💬 Book a Shoot
+    </a>
     <!-- 1. Navbar -->
     <nav class="navbar">
       <div class="nav-container">
@@ -42,7 +50,6 @@
     <!-- 2. Hero Section -->
     <section class="hero" id="home">
       <div class="hero-left">
-        <p class="label">TORONTO's PREMIUM CONTENT STUDIO</p>
         <h1 class="hero-title">
           <span>Bold.</span><br>
           <span>Confident.</span><br>
@@ -54,8 +61,27 @@
           <a href="#contact" class="btn-outlined">GET IN TOUCH</a>
         </div>
       </div>
-      <div class="hero-right">
+      <div class="hero-right" style="position: relative;">
         <img src="/hero_visual.png" alt="Premium Production Equipment" class="hero-img">
+        <div class="hero-floating-glass glass-dark reveal">
+          <p class="label" style="margin-bottom: 12px; font-size: 10px;">TORONTO's PREMIUM CONTENT STUDIO</p>
+          <div class="stats-row" style="margin-top: 0; gap: 24px;">
+            <div class="stat-item">
+              <span class="stat-num" style="font-size: 28px;">9+</span>
+              <span class="stat-label" style="font-size: 10px;">Years Exp</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" style="font-size: 28px;">50+</span>
+              <span class="stat-label" style="font-size: 10px;">Brands</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" style="font-size: 28px;">100+</span>
+              <span class="stat-label" style="font-size: 10px;">Projects</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="hero-bottom">
         <div class="scroll-indicator">SCROLL</div>
@@ -111,22 +137,6 @@
           <p class="label">ABOUT US</p>
           <h2 class="heading-large">We build brand value.</h2>
           <p class="body-text">Welcome to Brand Setters — Your One-Stop Digital Marketing Hub. Elevate your online presence with our comprehensive suite of services tailored for success. Specializing in dynamic content creation and personalized branding, we are your strategic partners in crafting compelling narratives that captivate audiences. We go beyond conventional marketing, offering innovative solutions to amplify your brand and leave a lasting impression.</p>
-          <div class="stats-row">
-            <div class="stat-item">
-              <span class="stat-num">9+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-num">50+</span>
-              <span class="stat-label">Brands Served</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-num">100+</span>
-              <span class="stat-label">Projects Delivered</span>
-            </div>
-          </div>
         </div>
         <div class="about-right reveal">
           <div class="collage-grid">
@@ -146,31 +156,31 @@
         <h2 class="heading-medium text-dark">A client-favorite for bold, confident branding.</h2>
       </div>
       <div class="services-grid">
-        <div class="service-card reveal">
+        <div class="service-card glass reveal">
           <!-- LayoutGrid -->
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
           <h3>Social Media Management</h3>
           <p>We handle your profiles on Instagram, Facebook, LinkedIn and others — discussing your goals, doing market research, setting up your look and feel.</p>
         </div>
-        <div class="service-card reveal">
+        <div class="service-card glass reveal">
           <!-- Video -->
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
           <h3>Content Creation</h3>
           <p>We style, shoot and edit — end to end solutions for content marketing — videos, graphics, and blogs.</p>
         </div>
-        <div class="service-card reveal">
+        <div class="service-card glass reveal">
           <!-- TrendingUp -->
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           <h3>SEO Marketing</h3>
           <p>Cutting-edge SEO to get your brand to the top of search results, weekly reports, transparency throughout.</p>
         </div>
-        <div class="service-card reveal">
+        <div class="service-card glass reveal">
           <!-- Megaphone -->
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
           <h3>Paid Advertising</h3>
           <p>Bespoke social media ad campaigns across Facebook and Instagram to maximize reach and drive conversions.</p>
         </div>
-        <div class="service-card reveal">
+        <div class="service-card glass reveal">
           <!-- Monitor -->
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
           <h3>Website Development</h3>
@@ -188,7 +198,7 @@
       </div>
       <div class="pricing-grid">
         <!-- START -->
-        <div class="pricing-card reveal">
+        <div class="pricing-card glass reveal">
           <p class="plan-name">START</p>
           <div class="price">$799<span>/Month</span></div>
           <p class="billed-note">Billed monthly</p>
@@ -205,7 +215,7 @@
           </div>
         </div>
         <!-- GROW -->
-        <div class="pricing-card highlighted reveal">
+        <div class="pricing-card glass-iridescent highlighted reveal">
           <div class="badge-popular">MOST POPULAR</div>
           <p class="plan-name">GROW</p>
           <div class="price">$1099<span>/Month</span></div>
@@ -221,7 +231,7 @@
           </div>
         </div>
         <!-- EXPAND -->
-        <div class="pricing-card reveal">
+        <div class="pricing-card glass reveal">
           <p class="plan-name">EXPAND</p>
           <div class="price">$1299<span>/Month</span></div>
           <p class="billed-note">Billed monthly</p>
@@ -245,7 +255,7 @@
         <h2 class="heading-medium text-dark">Don't just take our word for it.</h2>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card reveal">
+        <div class="testimonial-card glass reveal">
           <div class="stars text-gold">★★★★★</div>
           <p class="quote"><span class="quote-mark text-gold">"</span>Brandsetters completely transformed our agency's online presence. Their content is genuinely cinematic.<span class="quote-mark text-gold">"</span></p>
           <div class="testimonial-divider"></div>
@@ -257,7 +267,7 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal">
+        <div class="testimonial-card glass reveal">
           <div class="stars text-gold">★★★★★</div>
           <p class="quote"><span class="quote-mark text-gold">"</span>The only team in the GTA we trust with our music videos. The aesthetic is always bold and on point.<span class="quote-mark text-gold">"</span></p>
           <div class="testimonial-divider"></div>
@@ -269,7 +279,7 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal">
+        <div class="testimonial-card glass reveal">
           <div class="stars text-gold">★★★★★</div>
           <p class="quote"><span class="quote-mark text-gold">"</span>They handled our full brand rollout. The videos, the strategy, everything was premium.<span class="quote-mark text-gold">"</span></p>
           <div class="testimonial-divider"></div>
@@ -365,7 +375,7 @@
         <!-- Music Video -->
         <a href="#" class="portfolio-card reveal" data-category="music-videos">
           <img src="https://img.youtube.com/vi/wKNS4laPZvE/maxresdefault.jpg" alt="NO RULE">
-          <div class="portfolio-overlay">
+          <div class="portfolio-overlay glass-dark">
             <div class="portfolio-pill">Music Videos</div>
             <div class="portfolio-text">
               <h4 class="portfolio-title">NO RULE - KXBIRA</h4>
@@ -377,7 +387,7 @@
         <!-- Short Film -->
         <a href="#" class="portfolio-card reveal" data-category="short-films">
           <img src="https://img.youtube.com/vi/7j934789j2g/maxresdefault.jpg" alt="JOURNEY">
-          <div class="portfolio-overlay">
+          <div class="portfolio-overlay glass-dark">
             <div class="portfolio-pill">Short Films</div>
             <div class="portfolio-text">
               <h4 class="portfolio-title">JOURNEY</h4>
@@ -389,7 +399,7 @@
         <!-- Commercial -->
         <a href="#" class="portfolio-card reveal" data-category="commercials">
           <img src="https://img.youtube.com/vi/a1b2c3d4e5f/maxresdefault.jpg" alt="Strikers, Pool & Bar">
-          <div class="portfolio-overlay">
+          <div class="portfolio-overlay glass-dark">
             <div class="portfolio-pill">Commercials</div>
             <div class="portfolio-text">
               <h4 class="portfolio-title">Strikers, Pool & Bar</h4>
@@ -401,7 +411,7 @@
         <!-- Real Estate -->
         <a href="#" class="portfolio-card reveal" data-category="real-estate">
           <img src="https://img.youtube.com/vi/LKBOJq0qMOs/maxresdefault.jpg" alt="Luxury Real Estate">
-          <div class="portfolio-overlay">
+          <div class="portfolio-overlay glass-dark">
             <div class="portfolio-pill">Real Estate</div>
             <div class="portfolio-text">
               <h4 class="portfolio-title">LUXURY REAL ESTATE</h4>
@@ -418,7 +428,7 @@
       <div class="cta-container reveal">
         <h2 class="cta-heading">Ready to build something unforgettable?</h2>
         <p class="cta-subtext">Book a shoot today. No commitment, just a conversation.</p>
-        <a href="#contact" class="btn-cta">BOOK A SHOOT</a>
+        <a href="#contact" class="btn-cta glass-gold">BOOK A SHOOT</a>
       </div>
     </section>
 

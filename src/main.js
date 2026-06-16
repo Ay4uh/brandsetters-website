@@ -8,10 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 const navbar = document.querySelector('.navbar');
 if (navbar) {
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-      navbar.classList.add('scrolled');
+    if (window.scrollY > 60) {
+      navbar.classList.add('glass-dark');
+      navbar.classList.add('scrolled-glass'); // to handle any specific full-width overrides if needed
     } else {
-      navbar.classList.remove('scrolled');
+      navbar.classList.remove('glass-dark');
+      navbar.classList.remove('scrolled-glass');
     }
   });
 }
@@ -109,6 +111,52 @@ if (filterBtns.length > 0 && portfolioCards.length > 0) {
       });
       // Force refresh ScrollTrigger to recalculate bounds after filtering layout change
       setTimeout(() => ScrollTrigger.refresh(), 50);
+    });
+  });
+}
+
+// 6. Custom Cursor (iOS 26 Liquid Glass)
+const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+
+if (cursor && follower) {
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let cursorX = mouseX;
+  let cursorY = mouseY;
+  let followerX = mouseX;
+  let followerY = mouseY;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Use requestAnimationFrame for smooth lerping
+  function renderCursor() {
+    // Cursor snaps instantly
+    cursorX = mouseX;
+    cursorY = mouseY;
+    
+    // Follower lerps slowly behind
+    followerX += (mouseX - followerX) * 0.15;
+    followerY += (mouseY - followerY) * 0.15;
+
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+    follower.style.transform = `translate(${followerX}px, ${followerY}px) translate(-50%, -50%)`;
+
+    requestAnimationFrame(renderCursor);
+  }
+  requestAnimationFrame(renderCursor);
+
+  // Hover state detection
+  const clickables = document.querySelectorAll("a, button, .portfolio-card, .service-card");
+  clickables.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      follower.classList.add("hovering");
+    });
+    el.addEventListener("mouseleave", () => {
+      follower.classList.remove("hovering");
     });
   });
 }
