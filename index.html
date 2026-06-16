@@ -4,22 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brandsetters | Bold. Confident. Branding.</title>
+    <title>Brandsetters | Toronto's Premium Content Studio</title>
     <meta name="description" content="Mastering content for real estate, lawyers, brands and more. Music vids, Ads, Films, Events in GTA area, Canada." />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- 1. Navbar -->
     <nav class="navbar">
       <div class="nav-container">
-        <a href="#" class="logo">Brandsetters<span>.ca</span></a>
+        <a href="#" class="logo">Brandsetters<span class="text-gold">.ca</span></a>
         <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#contact" class="btn btn-outline">Book a Shoot</a>
+          <a href="#services">SERVICES</a>
+          <a href="#work">WORK</a>
+          <a href="#contact" class="btn-nav">BOOK A SHOOT</a>
         </div>
         <button class="mobile-menu-btn" aria-label="Toggle menu">
           <span></span>
@@ -29,414 +30,437 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-nav-links">
+        <a href="#services" class="mobile-link">SERVICES</a>
+        <a href="#work" class="mobile-link">WORK</a>
+        <a href="#contact" class="mobile-link">BOOK A SHOOT</a>
+      </div>
+    </div>
+
+    <!-- 2. Hero Section -->
     <section class="hero" id="home">
-      <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title"><span class="hero-word">Bold.</span><br><span class="hero-word">Confident.</span><br><span class="hero-word accent-text">Unforgettable.</span></h1>
-          <p class="hero-subtitle">Mastering premium content for pros in the GTA.<br>Real estate, lawyers, brands, and creative productions.</p>
-          <div class="hero-cta">
-            <a href="#work" class="btn btn-primary">View Our Reel</a>
-            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <div class="hero-left">
+        <p class="label">TORONTO's PREMIUM CONTENT STUDIO</p>
+        <h1 class="hero-title">
+          <span>Bold.</span><br>
+          <span>Confident.</span><br>
+          <span class="text-gold">Unforgettable.</span>
+        </h1>
+        <p class="hero-subtitle">Mastering premium content for pros in the GTA. Real estate, lawyers, brands, and creative productions.</p>
+        <div class="hero-cta">
+          <a href="#work" class="btn-filled">VIEW OUR REEL</a>
+          <a href="#contact" class="btn-outlined">GET IN TOUCH</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="/hero_visual.png" alt="Premium Production Equipment" class="hero-img">
+      </div>
+      <div class="hero-bottom">
+        <div class="scroll-indicator">SCROLL</div>
+      </div>
+    </section>
+
+    <!-- 3. Social Proof Bar -->
+    <section class="social-proof">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>★★★★★ "As seen on YouTube"</span>
+          <span class="dot">·</span>
+          <span>50+ Brands Served</span>
+          <span class="dot">·</span>
+          <span>9 Years Experience</span>
+          <span class="dot">·</span>
+          <span>GTA's #1 Content Studio</span>
+          <span class="dot">·</span>
+          <span>Music Videos</span>
+          <span class="dot">·</span>
+          <span>Short Films</span>
+          <span class="dot">·</span>
+          <span>Real Estate</span>
+          <span class="dot">·</span>
+          <span>Commercial</span>
+          <span class="dot">·</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>★★★★★ "As seen on YouTube"</span>
+          <span class="dot">·</span>
+          <span>50+ Brands Served</span>
+          <span class="dot">·</span>
+          <span>9 Years Experience</span>
+          <span class="dot">·</span>
+          <span>GTA's #1 Content Studio</span>
+          <span class="dot">·</span>
+          <span>Music Videos</span>
+          <span class="dot">·</span>
+          <span>Short Films</span>
+          <span class="dot">·</span>
+          <span>Real Estate</span>
+          <span class="dot">·</span>
+          <span>Commercial</span>
+          <span class="dot">·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. About / We build brand value -->
+    <section class="about section-padding-large" id="about">
+      <div class="about-container">
+        <div class="about-left reveal">
+          <p class="label">ABOUT US</p>
+          <h2 class="heading-large">We build brand value.</h2>
+          <p class="body-text">Welcome to Brand Setters — Your One-Stop Digital Marketing Hub. Elevate your online presence with our comprehensive suite of services tailored for success. Specializing in dynamic content creation and personalized branding, we are your strategic partners in crafting compelling narratives that captivate audiences. We go beyond conventional marketing, offering innovative solutions to amplify your brand and leave a lasting impression.</p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-num">9+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">Brands Served</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">100+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
           </div>
         </div>
-        <div class="hero-visual">
-          <img src="/hero_visual.png" alt="Premium Production Equipment" class="hero-img">
+        <div class="about-right reveal">
+          <div class="collage-grid">
+            <img src="/portfolio_musicvid_1781482521004.png" alt="Portfolio Collage 1" class="collage-img img-tl">
+            <img src="/portfolio_realestate_1781482511356.png" alt="Portfolio Collage 2" class="collage-img img-tr">
+            <img src="/portfolio_ad_1781482530627.png" alt="Portfolio Collage 3" class="collage-img img-bl">
+            <img src="/portfolio_musicvid_minimal_1781482882666.png" alt="Portfolio Collage 4" class="collage-img img-br">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="section-header reveal">
-        <h2 class="section-title mask-container"><span class="mask-text">We build brand value.</span></h2>
-      </div>
-      <div class="about-content reveal">
-        <p>Welcome to Brand Setters — Your One-Stop Digital Marketing Hub. Elevate your online presence with our comprehensive suite of services tailored for success. Specializing in dynamic content creation and personalized branding, we are your strategic partners in crafting compelling narratives that captivate audiences. We go beyond conventional marketing, offering innovative solutions to amplify your brand and leave a lasting impression.</p>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-      <div class="section-header reveal">
-        <h2 class="section-title">What We Do</h2>
-        <p class="section-subtitle">A client-favorite for bold, confident branding.</p>
+    <!-- 5. Services -->
+    <section class="services section-padding-large bg-light" id="services">
+      <div class="section-header center reveal">
+        <p class="label-dark">WHAT WE DO</p>
+        <h2 class="heading-medium text-dark">A client-favorite for bold, confident branding.</h2>
       </div>
       <div class="services-grid">
         <div class="service-card reveal">
-          <div class="service-icon">📱</div>
+          <!-- LayoutGrid -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
           <h3>Social Media Management</h3>
           <p>We handle your profiles on Instagram, Facebook, LinkedIn and others — discussing your goals, doing market research, setting up your look and feel.</p>
         </div>
         <div class="service-card reveal">
-          <div class="service-icon">🎥</div>
+          <!-- Video -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
           <h3>Content Creation</h3>
           <p>We style, shoot and edit — end to end solutions for content marketing — videos, graphics, and blogs.</p>
         </div>
         <div class="service-card reveal">
-          <div class="service-icon">🔍</div>
+          <!-- TrendingUp -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           <h3>SEO Marketing</h3>
           <p>Cutting-edge SEO to get your brand to the top of search results, weekly reports, transparency throughout.</p>
         </div>
         <div class="service-card reveal">
-          <div class="service-icon">📈</div>
+          <!-- Megaphone -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
           <h3>Paid Advertising</h3>
           <p>Bespoke social media ad campaigns across Facebook and Instagram to maximize reach and drive conversions.</p>
         </div>
         <div class="service-card reveal">
-          <div class="service-icon">💻</div>
+          <!-- Monitor -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
           <h3>Website Development</h3>
           <p>Custom websites built to match your brand.</p>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
+    <!-- 6. Pricing -->
+    <section class="pricing section-padding-large" id="pricing">
       <div class="section-header reveal">
-        <h2 class="section-title">Choose a plan that suits your business needs.</h2>
+        <p class="label">PRICING</p>
+        <h2 class="heading-medium">Choose a plan that suits your business needs.</h2>
+        <p class="body-text">All prices in CAD. Custom quotes available.</p>
       </div>
-      <div class="pricing-grid-3">
+      <div class="pricing-grid">
         <!-- START -->
         <div class="pricing-card reveal">
-          <div class="pricing-header">
-            <h3>START</h3>
-            <div class="price">$<span class="price-val" data-target="799">0</span> <span>/ Month</span></div>
-          </div>
-          <div class="pricing-body">
-            <ul class="pricing-features">
-              <li>Social Media Management</li>
-              <li>Profile setup</li>
-              <li>13 posts per month</li>
-              <li>2 video edits + 11 graphics</li>
-              <li>Can be tailored</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
+          <p class="plan-name">START</p>
+          <div class="price">$799<span>/Month</span></div>
+          <p class="billed-note">Billed monthly</p>
+          <div class="pricing-divider"></div>
+          <ul class="feature-list">
+            <li><span class="check text-gold">✓</span> Social Media Management</li>
+            <li><span class="check text-gold">✓</span> Profile setup</li>
+            <li><span class="check text-gold">✓</span> 13 posts per month</li>
+            <li><span class="check text-gold">✓</span> 2 video edits + 11 graphics</li>
+            <li><span class="check text-gold">✓</span> Can be tailored</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="#contact" class="btn-outlined full-width">START</a>
           </div>
         </div>
         <!-- GROW -->
-        <div class="pricing-card premium reveal">
-          <div class="pricing-header">
-            <h3>GROW</h3>
-            <div class="price">$<span class="price-val" data-target="1099">0</span> <span>/ Month</span></div>
-          </div>
-          <div class="pricing-body">
-            <p class="pricing-highlight">Everything in START, plus:</p>
-            <ul class="pricing-features">
-              <li>1-hour photo shoot session</li>
-              <li>10 photos for social media</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
+        <div class="pricing-card highlighted reveal">
+          <div class="badge-popular">MOST POPULAR</div>
+          <p class="plan-name">GROW</p>
+          <div class="price">$1099<span>/Month</span></div>
+          <p class="billed-note">Billed monthly</p>
+          <div class="pricing-divider"></div>
+          <ul class="feature-list">
+            <li><span class="check text-gold">✓</span> Everything in START</li>
+            <li><span class="check text-gold">✓</span> 1-hour photo shoot session</li>
+            <li><span class="check text-gold">✓</span> 10 photos for social media</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="#contact" class="btn-filled full-width">GROW</a>
           </div>
         </div>
         <!-- EXPAND -->
         <div class="pricing-card reveal">
-          <div class="pricing-header">
-            <h3>EXPAND</h3>
-            <div class="price">$<span class="price-val" data-target="1299">0</span> <span>/ Month</span></div>
-          </div>
-          <div class="pricing-body">
-            <p class="pricing-highlight">Everything in GROW, plus:</p>
-            <ul class="pricing-features">
-              <li>Video shoot for reel content</li>
-              <li>2 extra graphics</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Higher-volume Packages -->
-      <div class="pricing-custom">
-        <div class="pricing-volume-grid">
-          <div class="volume-card reveal">
-            <h4>START <span>$<span class="price-val" data-target="1499">0</span>/mo</span></h4>
-            <p>20 high quality edited and scripted short videos, captions and hashtags provided.</p>
-          </div>
-          <div class="volume-card reveal">
-            <h4>GROW <span>$<span class="price-val" data-target="1999">0</span>/mo</span></h4>
-            <p>30 high quality edited and scripted short videos.</p>
+          <p class="plan-name">EXPAND</p>
+          <div class="price">$1299<span>/Month</span></div>
+          <p class="billed-note">Billed monthly</p>
+          <div class="pricing-divider"></div>
+          <ul class="feature-list">
+            <li><span class="check text-gold">✓</span> Everything in GROW</li>
+            <li><span class="check text-gold">✓</span> Video shoot for reel content</li>
+            <li><span class="check text-gold">✓</span> 2 extra graphics</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="#contact" class="btn-outlined full-width">EXPAND</a>
           </div>
         </div>
-        <p class="pricing-custom-text">Get your custom quote today and pay for the services you need.</p>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-      <div class="section-header">
-        <h2 class="section-title">Client-Favorite</h2>
-        <p class="section-subtitle">Don't just take our word for it.</p>
+    <!-- 7. Testimonials -->
+    <section class="testimonials section-padding-large bg-light" id="testimonials">
+      <div class="section-header reveal">
+        <p class="label-dark">CLIENT LOVE</p>
+        <h2 class="heading-medium text-dark">Don't just take our word for it.</h2>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">"Brandsetters completely transformed our agency's online presence. Their content is genuinely cinematic."</p>
-          <div class="testimonial-author">
-            <h4>Sarah Jenkins</h4>
-            <p>Luxury Real Estate Broker</p>
+        <div class="testimonial-card reveal">
+          <div class="stars text-gold">★★★★★</div>
+          <p class="quote"><span class="quote-mark text-gold">"</span>Brandsetters completely transformed our agency's online presence. Their content is genuinely cinematic.<span class="quote-mark text-gold">"</span></p>
+          <div class="testimonial-divider"></div>
+          <div class="avatar-row">
+            <div class="avatar-circle">SJ</div>
+            <div class="avatar-info">
+              <p class="name">Sarah Jenkins</p>
+              <p class="title text-gold">Luxury Real Estate Broker</p>
+            </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">"The only team in the GTA we trust with our music videos. The aesthetic is always bold and on point."</p>
-          <div class="testimonial-author">
-            <h4>Marcus T.</h4>
-            <p>Artist & Producer</p>
+        <div class="testimonial-card reveal">
+          <div class="stars text-gold">★★★★★</div>
+          <p class="quote"><span class="quote-mark text-gold">"</span>The only team in the GTA we trust with our music videos. The aesthetic is always bold and on point.<span class="quote-mark text-gold">"</span></p>
+          <div class="testimonial-divider"></div>
+          <div class="avatar-row">
+            <div class="avatar-circle">MT</div>
+            <div class="avatar-info">
+              <p class="name">Marcus T.</p>
+              <p class="title text-gold">Artist & Producer</p>
+            </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">"They handled our full brand rollout. The videos, the strategy, everything was premium."</p>
-          <div class="testimonial-author">
-            <h4>David Chen</h4>
-            <p>Corporate Law Partner</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Personal Branding Matters -->
-    <section class="branding-matters" id="about">
-      <div class="branding-container">
-        <h2 class="section-title">Why Personal Branding Matters</h2>
-        <p class="section-subtitle">Your first impression is online.</p>
-        <div class="branding-content reveal">
-          <p class="branding-intro">Most clients check social media before reaching out. A professional and consistent online presence helps you:</p>
-          <ul class="branding-list">
-            <li>Build trust faster</li>
-            <li>Stay top-of-mind</li>
-            <li>Generate more referrals</li>
-            <li>Create authority in your market</li>
-            <li>Attract higher-quality clients</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Meet the Founder -->
-    <section class="founder" id="founder">
-      <div class="founder-container">
-        <div class="founder-image reveal">
-          <img src="/founder_portrait_1781624954549.png" alt="Aditya Mohindru">
-        </div>
-        <div class="founder-content reveal">
-          <h2 class="section-title">Meet the Founder</h2>
-          <p class="section-subtitle">Aditya Mohindru</p>
-          <div class="founder-bio">
-            <p>With over 9 years of experience as a videographer and photographer, Aditya Mohindru has collaborated with diverse businesses and individuals, passionately crafting engaging narratives that resonate with audiences. From capturing the essence of products to immortalizing the energy of events, he specializes in creating relevant, captivating content that tells the story of each brand with precision and style.</p>
-            <p class="founder-title">Founder & Owner — Brand Setters Marketing Solutions</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work/Portfolio Section -->
-    <section class="work" id="work">
-      <div class="section-header reveal">
-        <h2 class="section-title">Our Work</h2>
-        <p class="section-subtitle">Explore our latest productions.</p>
-      </div>
-      <div class="portfolio-grid">
-        <!-- Item 1: No Rule -->
-        <a href="https://www.youtube.com/watch?v=wKNS4laPZvE" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/wKNS4laPZvE/maxresdefault.jpg" alt="NO RULE - KXBIRA">
-          </div>
-          <div class="portfolio-info">
-            <h4>NO RULE - KXBIRA</h4>
-            <p>Music Video • Director & DOP</p>
-          </div>
-        </a>
-        <!-- Item 2: Her Love -->
-        <a href="https://www.youtube.com/watch?v=qOIbwK4MAmM" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/qOIbwK4MAmM/maxresdefault.jpg" alt="HER LOVE - SIMMA KALSI">
-          </div>
-          <div class="portfolio-info">
-            <h4>HER LOVE - SIMMA KALSI</h4>
-            <p>Music Video • DOP, Co-Director</p>
-          </div>
-        </a>
-        <!-- Item 3: Chazers -->
-        <a href="https://www.youtube.com/watch?v=TZoE7dUi1OE" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/TZoE7dUi1OE/maxresdefault.jpg" alt="CHAZERS">
-          </div>
-          <div class="portfolio-info">
-            <h4>CHAZERS</h4>
-            <p>Music Video • Director & DOP</p>
-          </div>
-        </a>
-        <!-- Item 4: Vair -->
-        <a href="https://youtu.be/93zLZgpnk-c" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/93zLZgpnk-c/maxresdefault.jpg" alt="VAIR - DARSH">
-          </div>
-          <div class="portfolio-info">
-            <h4>VAIR - DARSH</h4>
-            <p>Music Video • DOP</p>
-          </div>
-        </a>
-        <!-- Item 5: Sharp Surma -->
-        <a href="https://youtu.be/2OgQ86XJrIs" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/2OgQ86XJrIs/maxresdefault.jpg" alt="SHARP SURMA - DIPCEE">
-          </div>
-          <div class="portfolio-info">
-            <h4>SHARP SURMA - DIPCEE</h4>
-            <p>Music Video • Director & DOP</p>
-          </div>
-        </a>
-        <!-- Item 6: Journey -->
-        <a href="https://youtu.be/nygu5DmiTIg" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/nygu5DmiTIg/maxresdefault.jpg" alt="JOURNEY">
-          </div>
-          <div class="portfolio-info">
-            <h4>JOURNEY</h4>
-            <p>Short Film • Cinematographer</p>
-          </div>
-        </a>
-        <!-- Item 7: Commercials (Updated with specific projects) -->
-        <a href="https://www.youtube.com/watch?v=zQ0Rqfr8QLQ" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/zQ0Rqfr8QLQ/hqdefault.jpg" alt="Commercials">
-          </div>
-          <div class="portfolio-info">
-            <h4>COMMERCIALS</h4>
-            <p>Strikers, Pool & Bar • Mahodaya Collection 23' • Product B-Roll</p>
-          </div>
-        </a>
-        <!-- Item 8: Sorry -->
-        <a href="#" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80" alt="SORRY">
-          </div>
-          <div class="portfolio-info">
-            <h4>SORRY</h4>
-            <p>Short Film • Director & Writer • 2021</p>
-          </div>
-        </a>
-        <!-- Item 9: Dark Thoughts -->
-        <a href="#" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?w=800&q=80" alt="DARK THOUGHTS">
-          </div>
-          <div class="portfolio-info">
-            <h4>DARK THOUGHTS</h4>
-            <p>Short Film • Director • 2021</p>
-          </div>
-        </a>
-        <!-- Item 10: Onboard -->
-        <a href="#" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80" alt="ONBOARD">
-          </div>
-          <div class="portfolio-info">
-            <h4>ONBOARD</h4>
-            <p>Short Film • Cinematographer • 2025</p>
-          </div>
-        </a>
-        <!-- Item 11: 2-2 Peg -->
-        <a href="#" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f5f4dc?w=800&q=80" alt="2-2 PEG - GURLEZ AKHTAR">
-          </div>
-          <div class="portfolio-info">
-            <h4>2-2 PEG – GURLEZ AKHTAR</h4>
-            <p>Music Video • Director</p>
-          </div>
-        </a>
-        <!-- Item 12: Real Estate (Restored) -->
-        <a href="https://www.youtube.com/watch?v=LKBOJq0qMOs" target="_blank" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/LKBOJq0qMOs/hqdefault.jpg" alt="Real Estate">
-          </div>
-          <div class="portfolio-info">
-            <h4>LUXURY REAL ESTATE</h4>
-            <p>Architectural Showcase • Real Estate</p>
-          </div>
-        </a>
-        <!-- Item 13: Social Media Content Portraits -->
-        <a href="#" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/TinreseMTvM/hqdefault.jpg" alt="Social Media Portraits">
-          </div>
-          <div class="portfolio-info">
-            <h4>PORTRAITS & SOCIAL</h4>
-            <p>Social Media Content • Portraits</p>
-          </div>
-        </a>
-        <!-- Item 14: Events and Shows -->
-        <a href="#" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/H2d2BVvsWUM/hqdefault.jpg" alt="Events & Shows">
-          </div>
-          <div class="portfolio-info">
-            <h4>EVENTS & LIVE SHOWS</h4>
-            <p>Event Coverage • Live Shows</p>
-          </div>
-        </a>
-        <!-- Item 15: Cars -->
-        <a href="#" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/pH93hqj3bmQ/hqdefault.jpg" alt="Automotive">
-          </div>
-          <div class="portfolio-info">
-            <h4>AUTOMOTIVE CINEMATOGRAPHY</h4>
-            <p>Car Exclusives • Automotive</p>
-          </div>
-        </a>
-        <!-- Item 16: Food Photography -->
-        <a href="#" class="portfolio-item">
-          <div class="portfolio-img-wrapper">
-             <img src="https://img.youtube.com/vi/-g9JCeSukDE/hqdefault.jpg" alt="Food Photography">
-          </div>
-          <div class="portfolio-info">
-            <h4>CULINARY ARTS</h4>
-            <p>Commercial Food Photography</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Contact/Footer Section -->
-    <footer class="footer" id="contact">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <h2 class="footer-heading">Brand with us. Grow with us.</h2>
-          <p>Streamline your marketing effortlessly. Choose your essentials, we handle the rest.</p>
-        </div>
-        <div class="footer-info">
-          <div class="footer-col">
-            <h4>Explore</h4>
-            <a href="#about" class="footer-link">Services</a>
-            <a href="#work" class="footer-link">Work</a>
-            <a href="#contact" class="footer-link">Book a Shoot</a>
-          </div>
-          <div class="footer-col">
-            <h4>Location</h4>
-            <p>Greater Toronto Area (GTA)</p>
-            <p>Ontario, Canada</p>
-          </div>
-          <div class="footer-col">
-            <h4>Connect</h4>
-            <a href="https://wa.me/14376886603" target="_blank" class="footer-link">WhatsApp: 437-688-6603</a>
-            <a href="mailto:brandsettersmarketingsolutions@gmail.com" class="footer-link">brandsettersmarketingsolutions@gmail.com</a>
-            <div class="social-links" style="margin-top: 1rem; display: flex; gap: 1rem;">
-              <a href="https://instagram.com/brandsetters.ca" target="_blank" aria-label="Instagram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </a>
-              <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-              </a>
+        <div class="testimonial-card reveal">
+          <div class="stars text-gold">★★★★★</div>
+          <p class="quote"><span class="quote-mark text-gold">"</span>They handled our full brand rollout. The videos, the strategy, everything was premium.<span class="quote-mark text-gold">"</span></p>
+          <div class="testimonial-divider"></div>
+          <div class="avatar-row">
+            <div class="avatar-circle">DC</div>
+            <div class="avatar-info">
+              <p class="name">David Chen</p>
+              <p class="title text-gold">Corporate Law Partner</p>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- 8. Why Personal Branding Matters -->
+    <section class="branding-matters section-padding-large" id="branding">
+      <div class="branding-container">
+        <div class="branding-left reveal">
+          <p class="label">WHY IT MATTERS</p>
+          <h2 class="heading-medium">Why Personal Branding Matters</h2>
+          <p class="branding-subheading text-gold">YOUR FIRST IMPRESSION IS ONLINE.</p>
+          <p class="body-text">Most clients check social media before reaching out. A professional and consistent online presence helps you:</p>
+          <ul class="benefit-list">
+            <li><span class="arrow text-gold">→</span> Build trust faster</li>
+            <li><span class="arrow text-gold">→</span> Stay top-of-mind</li>
+            <li><span class="arrow text-gold">→</span> Generate more referrals</li>
+            <li><span class="arrow text-gold">→</span> Create authority in your market</li>
+            <li><span class="arrow text-gold">→</span> Attract higher-quality clients</li>
+          </ul>
+        </div>
+        <div class="branding-right reveal">
+          <div class="stat-watermark text-gold">73%</div>
+          <div class="stat-overlay-text">
+            <p>of consumers research a business online before making contact.</p>
+            <p class="stat-source">— BrightLocal Consumer Survey</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Meet the Founder -->
+    <section class="founder section-padding-large" id="founder">
+      <div class="founder-container">
+        <div class="founder-left reveal">
+          <div class="founder-img-placeholder">
+            <!-- Placeholder for Aditya photo -->
+            <div class="initials text-gold">AM</div>
+            <div class="founder-overlay">
+              <p class="founder-name">ADITYA MOHINDRU</p>
+              <p class="founder-title-small text-gold">Founder & Owner</p>
+            </div>
+          </div>
+        </div>
+        <div class="founder-right reveal">
+          <p class="label">MEET THE FOUNDER</p>
+          <h2 class="heading-medium">Aditya Mohindru</h2>
+          <p class="founder-role text-gold">Videographer & Photographer</p>
+          <div class="founder-divider"></div>
+          <p class="body-text">With over 9 years of experience as a videographer and photographer, Aditya Mohindru has collaborated with diverse businesses and individuals, passionately crafting engaging narratives that resonate with audiences. From capturing the essence of products to immortalizing the energy of events, he specializes in creating relevant, captivating content that tells the story of each brand with precision and style.</p>
+          <div class="founder-socials">
+            <a href="https://instagram.com/brandsetters.ca" target="_blank" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              @brandsetters.ca
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M2.5 7.1c.1-1.5 1.3-2.6 2.8-2.8C8.1 4 12 4 12 4s3.9 0 6.7.3c1.5.2 2.7 1.3 2.8 2.8.3 2.5.3 4.9.3 4.9s0 2.4-.3 4.9c-.1 1.5-1.3 2.6-2.8 2.8-2.8.3-6.7.3-6.7.3s-3.9 0-6.7-.3c-1.5-.2-2.7-1.3-2.8-2.8-.3-2.5-.3-4.9-.3-4.9s0-2.4.3-4.9z"/><path d="m10 15 5-3-5-3v6z"/></svg>
+              Brandsetters
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Our Work (Portfolio Grid) -->
+    <section class="work section-padding-large" id="work">
+      <div class="section-header reveal">
+        <p class="label">OUR WORK</p>
+        <h2 class="heading-medium">Explore our latest productions.</h2>
+      </div>
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="music-videos">Music Videos</button>
+        <button class="filter-btn" data-filter="short-films">Short Films</button>
+        <button class="filter-btn" data-filter="commercials">Commercials</button>
+        <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+        <button class="filter-btn" data-filter="portraits">Portraits</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="automotive">Automotive</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+      </div>
+      <div class="portfolio-grid">
+        <!-- We will populate these via JS or statically. Let's do static for SEO/load. -->
+        <!-- Music Video -->
+        <a href="#" class="portfolio-card reveal" data-category="music-videos">
+          <img src="https://img.youtube.com/vi/wKNS4laPZvE/maxresdefault.jpg" alt="NO RULE">
+          <div class="portfolio-overlay">
+            <div class="portfolio-pill">Music Videos</div>
+            <div class="portfolio-text">
+              <h4 class="portfolio-title">NO RULE - KXBIRA</h4>
+              <p class="portfolio-subtitle">Director & DOP</p>
+            </div>
+            <div class="portfolio-arrow">→</div>
+          </div>
+        </a>
+        <!-- Short Film -->
+        <a href="#" class="portfolio-card reveal" data-category="short-films">
+          <img src="https://img.youtube.com/vi/7j934789j2g/maxresdefault.jpg" alt="JOURNEY">
+          <div class="portfolio-overlay">
+            <div class="portfolio-pill">Short Films</div>
+            <div class="portfolio-text">
+              <h4 class="portfolio-title">JOURNEY</h4>
+              <p class="portfolio-subtitle">Director & Writer</p>
+            </div>
+            <div class="portfolio-arrow">→</div>
+          </div>
+        </a>
+        <!-- Commercial -->
+        <a href="#" class="portfolio-card reveal" data-category="commercials">
+          <img src="https://img.youtube.com/vi/a1b2c3d4e5f/maxresdefault.jpg" alt="Strikers, Pool & Bar">
+          <div class="portfolio-overlay">
+            <div class="portfolio-pill">Commercials</div>
+            <div class="portfolio-text">
+              <h4 class="portfolio-title">Strikers, Pool & Bar</h4>
+              <p class="portfolio-subtitle">Commercial Production</p>
+            </div>
+            <div class="portfolio-arrow">→</div>
+          </div>
+        </a>
+        <!-- Real Estate -->
+        <a href="#" class="portfolio-card reveal" data-category="real-estate">
+          <img src="https://img.youtube.com/vi/LKBOJq0qMOs/maxresdefault.jpg" alt="Luxury Real Estate">
+          <div class="portfolio-overlay">
+            <div class="portfolio-pill">Real Estate</div>
+            <div class="portfolio-text">
+              <h4 class="portfolio-title">LUXURY REAL ESTATE</h4>
+              <p class="portfolio-subtitle">Architectural Showcase</p>
+            </div>
+            <div class="portfolio-arrow">→</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 11. CTA Banner -->
+    <section class="cta-banner">
+      <div class="cta-container reveal">
+        <h2 class="cta-heading">Ready to build something unforgettable?</h2>
+        <p class="cta-subtext">Book a shoot today. No commitment, just a conversation.</p>
+        <a href="#contact" class="btn-cta">BOOK A SHOOT</a>
+      </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer class="footer" id="contact">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <a href="#" class="logo">Brandsetters<span class="text-gold">.ca</span></a>
+          <p class="footer-tagline">Bold. Confident. Unforgettable.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/brandsetters.ca" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="https://youtube.com" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M2.5 7.1c.1-1.5 1.3-2.6 2.8-2.8C8.1 4 12 4 12 4s3.9 0 6.7.3c1.5.2 2.7 1.3 2.8 2.8.3 2.5.3 4.9.3 4.9s0 2.4-.3 4.9c-.1 1.5-1.3 2.6-2.8 2.8-2.8.3-6.7.3-6.7.3s-3.9 0-6.7-.3c-1.5-.2-2.7-1.3-2.8-2.8-.3-2.5-.3-4.9-.3-4.9s0-2.4.3-4.9z"/><path d="m10 15 5-3-5-3v6z"/></svg></a>
+            <a href="https://tiktok.com" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music-2"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col-nav">
+          <p class="footer-label">NAVIGATE</p>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Book a Shoot</a>
+        </div>
+        <div class="footer-col-nav">
+          <p class="footer-label">SERVICES</p>
+          <a href="#services">Content Creation</a>
+          <a href="#services">Social Media</a>
+          <a href="#services">SEO Marketing</a>
+          <a href="#services">Paid Ads</a>
+          <a href="#services">Web Development</a>
+        </div>
+        <div class="footer-col-contact">
+          <p class="footer-label">GET IN TOUCH</p>
+          <p>Greater Toronto Area (GTA), Ontario, Canada</p>
+          <a href="https://wa.me/14376886603">WhatsApp: 437-688-6603</a>
+          <a href="mailto:brandsettersmarketingsolutions@gmail.com">brandsettersmarketingsolutions@gmail.com</a>
+          <a href="https://instagram.com/brandsetters.ca">@brandsetters.ca</a>
+        </div>
+      </div>
       <div class="footer-bottom">
-        <p>All pricing mentioned above is in CAD. Applicable taxes will be charged extra and invoiced separately.</p>
-        <p>&copy; 2026 Brand Setters. All rights reserved.</p>
+        <p>© 2026 Brand Setters Marketing Solutions. All rights reserved.</p>
+        <p>All pricing in CAD. Taxes invoiced separately.</p>
       </div>
     </footer>
 
