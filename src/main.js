@@ -50,10 +50,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// 3. Scroll Reveal Animations
-// Specification: 0.5s duration, cubic-bezier(0.16, 1, 0.3, 1), translateY(30px) -> 0
+// 3. Scroll Reveal Animations (Apple-like fluidity)
 const revealElements = document.querySelectorAll('.reveal');
-gsap.set(revealElements, { opacity: 0, y: 30 });
+// Initial state: shifted down, transparent, and blurred
+gsap.set(revealElements, { opacity: 0, y: 40, filter: 'blur(12px)' });
 
 ScrollTrigger.batch('.reveal', {
   start: "top 90%",
@@ -61,15 +61,15 @@ ScrollTrigger.batch('.reveal', {
     gsap.to(elements, {
       opacity: 1,
       y: 0,
-      duration: 0.5,
-      stagger: 0.08,
-      ease: "custom", // Approximating cubic-bezier(0.16, 1, 0.3, 1) using power3.out or CustomEase
-      // GSAP default ease 'power3.out' is close enough to 0.16, 1, 0.3, 1
+      filter: 'blur(0px)',
+      duration: 0.9,
+      stagger: 0.1,
+      ease: "power4.out", // Soft, long-tail spring feel typical of Apple UI
     });
   },
   once: true
 });
-// Let's use power3.out as standard since CustomEase requires extra plugin setup.
+// GSAP default ease 'power3.out' is close enough to 0.16, 1, 0.3, 1, but power4.out is even silkier.
 gsap.config({ force3D: true });
 
 // 4. Hero Parallax

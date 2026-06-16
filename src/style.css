@@ -1143,3 +1143,21 @@ body, a, button {
     right: 10px;
   }
 }
+
+/* --- APPLE-LIKE MICRO-INTERACTIONS --- */
+/* Override transitions for a fluid spring feel */
+:root {
+  --transition-hover: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active states (scale down on click like iOS apps) */
+.btn-filled:active, .btn-outlined:active, .btn-nav:active, .btn-cta:active, 
+.service-card:active, .portfolio-card:active, .pricing-card:active, .testimonial-card:active {
+  transform: scale(0.96) !important;
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Make sure hovered cards use the spring transition */
+.service-card:hover, .pricing-card:hover, .portfolio-card:hover {
+  transition: var(--transition-hover);
+}
