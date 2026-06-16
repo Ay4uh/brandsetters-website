@@ -1,15 +1,15 @@
 /* Custom Properties */
 :root {
-  --color-bg: #000000;
-  --color-surface: #111111;
-  --color-surface-hover: #222222;
-  --color-text: #d9d9d9;
-  --color-text-muted: #a0a0a0;
+  --color-bg: #050505;
+  --color-surface: #121212;
+  --color-surface-hover: #1c1c1c;
+  --color-text: #e4e4e7;
+  --color-text-muted: #a1a1aa;
   --color-text-bright: #ffffff;
-  --color-accent: #ff0000;
-  --color-accent-glow: rgba(255, 0, 0, 0.15);
-  --color-secondary: #ff0000;
-  --color-border: #333333;
+  --color-accent: #d49d82;
+  --color-accent-glow: rgba(212, 157, 130, 0.15);
+  --color-secondary: #d49d82;
+  --color-border: rgba(255, 255, 255, 0.1);
   
   --font-main: 'Outfit', sans-serif;
   --transition-fast: 0.2s ease;
@@ -77,7 +77,7 @@ h1, h2, h3, h4 {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #1a252f;
+  background-color: #222;
   transition: var(--transition-normal);
   z-index: -1;
 }
@@ -92,19 +92,19 @@ h1, h2, h3, h4 {
 }
 
 .btn-secondary {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--color-text);
   backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
 .btn-outline {
   background-color: transparent;
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
   color: var(--color-text);
 }
 
@@ -127,10 +127,10 @@ h1, h2, h3, h4 {
 
 .navbar.scrolled {
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(5, 5, 5, 0.85);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .nav-container {
@@ -275,7 +275,7 @@ h1, h2, h3, h4 {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   animation: float 6s ease-in-out infinite;
 }
 
@@ -415,14 +415,14 @@ section {
   padding: 3rem 2rem;
   border-radius: 8px;
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   transition: var(--transition-normal);
   position: relative;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08), 0 0 0 1px var(--color-accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--color-accent);
   border-color: var(--color-accent);
 }
 
@@ -462,7 +462,7 @@ section {
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 3rem 2rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   transition: var(--transition-normal);
   display: flex;
   flex-direction: column;
@@ -470,7 +470,7 @@ section {
 
 .pricing-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08), 0 0 0 1px var(--color-accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--color-accent);
   border-color: var(--color-accent);
 }
 
@@ -479,9 +479,9 @@ section {
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 4px 15px rgba(43, 58, 74, 0.05); }
-  50% { box-shadow: 0 4px 25px rgba(43, 58, 74, 0.3); }
-  100% { box-shadow: 0 4px 15px rgba(43, 58, 74, 0.05); }
+  0% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); }
+  50% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); }
+  100% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); }
 }
 
 .pricing-header h3 {
@@ -575,7 +575,7 @@ section {
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   text-align: left;
 }
 
@@ -625,7 +625,7 @@ section {
   padding: 3rem;
   border-radius: 8px;
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .branding-intro {
@@ -668,7 +668,7 @@ section {
 .founder-image img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   aspect-ratio: 4/5;
   object-fit: cover;
 }
@@ -786,7 +786,7 @@ section {
   overflow: hidden;
   cursor: pointer;
   aspect-ratio: 16/9;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .portfolio-img-wrapper {
@@ -961,7 +961,7 @@ section {
     padding: 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: var(--transition-normal);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
   }
 
   .nav-links.active {
