@@ -38,7 +38,7 @@ body {
 h1, h2, h3, h4 {
   line-height: 1.1;
   font-weight: 800;
-  color: #111;
+  color: var(--color-text-bright);
 }
 
 .accent-text {
@@ -324,7 +324,7 @@ h1, h2, h3, h4 {
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #444;
+  color: var(--color-text);
   margin-bottom: 3rem;
   font-weight: 400;
   max-width: 600px;
@@ -745,7 +745,7 @@ section {
   font-size: 1.15rem;
   font-weight: 300;
   font-style: italic;
-  color: #a0aec0;
+  color: var(--color-text-muted);
   margin-bottom: 2rem;
   line-height: 1.7;
 }
@@ -766,7 +766,7 @@ section {
 
 /* Work / Portfolio */
 .work {
-  background-color: #f1f3f5;
+  background-color: var(--color-surface-hover);
 }
 
 .portfolio-grid {
@@ -793,7 +793,7 @@ section {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #ddd;
+  background-color: var(--color-border);
 }
 
 .portfolio-img-wrapper img {
@@ -823,7 +823,7 @@ section {
 }
 
 .portfolio-info p {
-  color: #e9ecef;
+  color: var(--color-text-bright);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
