@@ -1,6 +1,6 @@
 /* --- BRANDSETTERS 10/10 CINEMATIC DARK THEME --- */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
 :root {
   /* Colors - Light Theme Pivot */
@@ -716,18 +716,31 @@ a {
   width: 100%;
   aspect-ratio: 4/5;
   border-radius: 24px;
-  background: var(--color-surface);
+  background: #111111; /* Dark charcoal */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
+.founder-img-placeholder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
 .founder-img-placeholder .initials {
-  font-size: 120px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  opacity: 0.2;
+  font-size: 160px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-white); /* Since we inverted white to dark on light theme, wait! */
+  /* If --color-white is dark (#141414), it won't show on #111. Let's explicitly use white or gold. */
+  color: #FFFFFF;
+  opacity: 0.15;
+  z-index: 0;
 }
 .founder-overlay {
   position: absolute;
@@ -1277,4 +1290,59 @@ body, a, button {
 .cursor-follower.hovering {
   background: rgba(201, 151, 60, 0.15);
   border-color: rgba(201, 151, 60, 0.3);
+}
+
+/* Fix 2: Frosted glass for stat card and featured pricing card */
+.hero-stats-card, .pricing-card.highlighted {
+  backdrop-filter: blur(24px) saturate(180%) brightness(1.05);
+  -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.05);
+  background: rgba(255, 255, 255, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 
+    0 0 0 0.5px rgba(255,255,255,0.6) inset,
+    0 1px 0 rgba(255,255,255,1) inset,
+    0 8px 32px rgba(0,0,0,0.05) !important;
+}
+
+/* Fix 3: Hero typography scale */
+.hero-title {
+  font-size: clamp(4rem, 8vw, 9rem) !important;
+  line-height: 1.1;
+}
+.hero-title .text-gold {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Fix 4: Work grid dark overlay gradient */
+.portfolio-card {
+  position: relative;
+}
+.portfolio-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.portfolio-overlay {
+  z-index: 2 !important;
+}
+.portfolio-title, .portfolio-category {
+  position: relative;
+  z-index: 3;
+}
+
+/* Fix 5: Founder text must be white over the dark photo */
+.founder-overlay .founder-name, .founder-overlay p {
+  color: #FFFFFF !important;
+  z-index: 3;
+}
+.founder-overlay {
+  z-index: 2;
 }

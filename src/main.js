@@ -53,7 +53,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // 3. Scroll Reveal Animations (Apple-like fluidity)
 const revealElements = document.querySelectorAll('.reveal');
 // Initial state: shifted down, transparent, and blurred
-gsap.set(revealElements, { opacity: 0, y: 40, filter: 'blur(12px)' });
+gsap.set(revealElements, { opacity: 0.95, y: 40 });
 
 ScrollTrigger.batch('.reveal', {
   start: "top 90%",
@@ -61,7 +61,6 @@ ScrollTrigger.batch('.reveal', {
     gsap.to(elements, {
       opacity: 1,
       y: 0,
-      filter: 'blur(0px)',
       duration: 0.9,
       stagger: 0.1,
       ease: "power4.out", // Soft, long-tail spring feel typical of Apple UI
