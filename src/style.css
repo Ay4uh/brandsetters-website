@@ -266,12 +266,12 @@ a {
 
 /* --- 3. Hero Section --- */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  padding: 0 5%;
+  padding: 160px 5% 60px 5%;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 .hero-left {
   flex: 0 0 55%;
